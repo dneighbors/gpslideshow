@@ -1,0 +1,36 @@
+<html>
+<body scroll="no">
+	<iframe id="main_screen" src ="http://integrumtech.com" scrolling="no">
+	  <p>&nbsp;</p>
+	</iframe>
+	<script type="text/javascript">
+	
+	var websites = new Array();
+	websites[0] = "http://builder.integrumdemo.com/crs-billing";
+	websites[1] = "http://builder.integrumdemo.com/vanpool";
+	websites[2] = "http://builder.integrumdemo.com/na3-expero-redesign";
+	websites[3] = "http://builder.integrumdemo.com/savvycollector";
+	websites[4] = "http://builder.integrumdemo.com/rideralerts";
+	websites[5] = "http://builder.integrumdemo.com/readphoenix";
+	websites[6] = "http://builder.integrumdemo.com/na3-sharing-server";
+	websites[7] = "http://builder.integrumdemo.com/rideralerts";
+	var i = 0;
+	setTimeout("change_url(" + i + ")", 30000)
+
+	function change_url(url_id)
+	{
+		//alert('im here');
+		document.getElementById('main_screen').src = websites[url_id];
+		if (i==websites.length-1){
+			i = 0;
+	    }
+	 	else{
+			i++;
+	    }
+		setTimeout("change_url(" + i + ")", 30000)
+	}	
+	
+	</script>
+</body>
+</html>
+
