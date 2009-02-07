@@ -1,0 +1,18 @@
+<p>
+  <b>Title:</b>
+  <%=h @slide_url.title %>
+</p>
+
+<p>
+  <b>Url:</b>
+  <%=h @slide_url.url %>
+</p>
+
+<p>
+  <b>Duration:</b>
+  <%=h @slide_url.duration %>
+</p>
+
+
+<%= link_to 'Edit', edit_slide_url_path(@slide_url) %> |
+<%= link_to 'Back', slide_urls_path %>

@@ -1,0 +1,24 @@
+<h1>Listing slide_urls</h1>
+
+<table>
+  <tr>
+    <th>Title</th>
+    <th>Url</th>
+    <th>Duration</th>
+  </tr>
+
+<% for slide_url in @slide_urls %>
+  <tr>
+    <td><%=h slide_url.title %></td>
+    <td><%=h slide_url.url %></td>
+    <td><%=h slide_url.duration %></td>
+    <td><%= link_to 'Show', slide_url %></td>
+    <td><%= link_to 'Edit', edit_slide_url_path(slide_url) %></td>
+    <td><%= link_to 'Destroy', slide_url, :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New slide_url', new_slide_url_path %>
