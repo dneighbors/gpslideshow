@@ -1,3 +1,9 @@
+This project is to allow you to automatically change what webpage is displayed 
+in a browser without human interaction.  It was created to run in fullscreen (kiosk) mode 
+and broadcast various url's on a TV in a very public place.  It also is good for monitoring 
+multiple continuous integration projects in Integrity, Cruise, etc...
+
+
 == Welcome to Rails
 
 Rails is a web-application framework that includes everything needed to create 
