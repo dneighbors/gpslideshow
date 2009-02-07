@@ -82,4 +82,9 @@ class SlideUrlsController < ApplicationController
       format.xml  { head :ok }
     end
   end
+  
+  # NOT RESTFUL.. TOO LAZY FOR ANTOHER CONTROLLER
+  def viewer
+    @urls = SlideUrl.find(:all)
+  end
 end

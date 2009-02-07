@@ -1,0 +1,27 @@
+<iframe id="main_screen" src ="" scrolling="no" width="100%" height="1000px">
+  <p>&nbsp;</p>
+</iframe>
+<script type="text/javascript">
+
+var websites = new Array();
+<% @urls.each_with_index do |url, index| %>
+	websites[<%= index.to_i %>] = "<%= url.url %>";
+<% end %>
+
+
+var i = 0;
+
+function change_url(url_id)
+{
+	document.getElementById('main_screen').src = websites[url_id];
+	if (i==<%= @urls.size %>){
+		window.location.reload()
+    }
+ 	else{
+		i++;
+    }
+	setTimeout("change_url(" + i + ")", 30000)
+}	
+change_url(i);
+
+</script>
